@@ -1,10 +1,10 @@
 body {
-    background-color:#9400ff;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0077cc;
 }
 h1 {
     margin-top: 35vh;
     text-shadow: 3px 2px black;
-    font-family: "Comic Sans MS", cursive, sans-serif;
     text-align: center;
     color:white
 }
@@ -13,74 +13,77 @@ p {
     text-shadow: 1px 1px black;
     text-align: center;
     color: white;
-    font-family:"Comic Sans MS", cursive, sans-serif;
     font-size: 20px;
 }
-.thibaultisafag {  
-    margin-top: 40px;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 20px;
-    color: white;
-    margin-left: 40vw;
-    border: radius; 15px;
+button {
+  font-family: 'Hind Guntur', sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  letter-spacing: 0.025em;
+
+  background: black;
+  padding: 18px 11px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10Px;
+  min-width: 120px;
+  overflow: hidden;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-a {
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 20px;
-    color: white;
-    border-radius: 15px;
+button span {BO
+  display: block;
+  position: relative;
+  z-index: 10;
 }
-a:link,:visited{
-    background-color: black;
-    color: white;
-    padding: 14px 25px;
-    text-decoration: none;
+
+button:after,
+button:before {
+  padding: 18px 0 11px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: calc(100% - 29px);
+  width: calc(100% + 20px);
+  color:black;
+  border-radius: 2px;
+  transform: skew(-25deg);
 }
-a:hover, a:active{
-    background-color: white;
-    color: black;
+
+button:after {
+  background:#fff;
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  z-index: 0;
+  opacity: 0.8;
 }
-.dropbtn {
-    background-color: black;
-    color: white;
-    padding: 14px 25px;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-    font-family:"Comic Sans MS", cursive, sans-serif;
-    border-radius: 15px
+button:before {
+  background: #13c276;
+  z-index: 5;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
-  
-.dropdown {
-    position: relative ;
-    display: inline-block;
+
+button:hover:after {
+  left: calc(0% - 10px);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
-  
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #9400ff;
-    width: 145px;
-    z-index: 1;
-    border-radius: 15px;
+
+button:hover:before {
+  left: calc(0% - 10px);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    position: relative;
-}  
-.dropdown-content a:hover {
-    background-color: white;
-    color: black;
-}
-  
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-  
-.dropdown:hover .dropbtn {
-    background-color: white;
-    color: black
+
+canvas {
+  width: 420px;
+  height: 420px;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
