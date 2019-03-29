@@ -62,7 +62,7 @@ button:after {
   opacity: 0.8;
 }
 button:before {
-  background: #13c276;
+  background: #28a5ff;
   z-index: 5;
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
